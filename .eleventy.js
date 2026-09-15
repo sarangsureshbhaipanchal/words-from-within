@@ -12,7 +12,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy({
-    "public": ""
+    "public/assets": "assets"
   });
 
   eleventyConfig.addCollection("posts", api =>
