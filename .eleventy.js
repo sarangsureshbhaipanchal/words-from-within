@@ -1,0 +1,1 @@
+module.exports=function(eleventyConfig){eleventyConfig.addPassthroughCopy({"public":"."});eleventyConfig.addCollection("posts",api=>api.getFilteredByGlob("src/posts/*.md").sort((a,b)=>b.date-a.date));return{dir:{input:"src",includes:"_includes",output:"_site"}}};
