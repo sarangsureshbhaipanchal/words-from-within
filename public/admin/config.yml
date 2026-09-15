@@ -4,7 +4,7 @@ backend:
   branch: main
 media_folder: "public/assets/images"
 public_folder: "/assets/images"
-site_url: https://peppy-cheesecake-a1ee5c.netlify.app
+site_url: https://words-from-within.netlify.app
 collections:
   - name: "posts"
     label: "Posts"
