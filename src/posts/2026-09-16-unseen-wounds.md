@@ -4,7 +4,7 @@ date: 2026-09-16T15:31:00.000+05:30
 type: Life Lesson
 category: "#Lifethoughts"
 fontStyle: Classic Serif
-image: /assets/images/gemini_generated_image_wdyhvwdyhvwdyhvw.jpg
+image: /assets/images/unseen-wounds-1-.jpg
 featured: false
 ---
 "I became good at hidingmy pain, because nobody ever stayed long enough to understand it".
