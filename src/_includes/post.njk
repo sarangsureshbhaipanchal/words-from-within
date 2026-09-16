@@ -76,6 +76,33 @@
     .content {
       margin: 0 0 75px;
     }
+	.content {
+  margin: 0 0 75px;
+}
+
+/* Font Styles */
+
+.font-classic-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.font-modern {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-typewriter {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.font-poetic {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+.font-elegant {
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 0.2px;
+}
 
     .content p {
       margin: 0 0 28px;
@@ -176,7 +203,7 @@
       </div>
     {% endif %}
 
-    <article class="content">
+    <article class="content font-{{ fontStyle | default('Classic Serif') | lower | replace(' ', '-') }}">
       {{content|safe}}
     </article>
 
