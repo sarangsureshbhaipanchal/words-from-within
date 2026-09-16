@@ -1,10 +1,237 @@
 ---
 layout: page.njk
 ---
-<section class="hero"><div class="wrap hero-inner"><div class="eyebrow">A personal space for thoughts</div><h1>Some feelings are not meant to be explained.<br><em>They are meant to be written.</em></h1><p class="guj">કેટલીક વાતો કહેવા માટે નથી હોતી... લખવા માટે હોય છે.</p><div class="actions"><a class="btn primary" href="#blogs">Read My Blogs</a><a class="btn" href="#shayari">Explore Shayari</a><a class="btn" href="#lessons">Life Lessons</a></div></div></section>
-<section><div class="wrap"><div class="eyebrow">A Thought From Me</div><div class="thought"><div class="quote guj">જીવન હંમેશા આપણને એ નથી આપતું જેની આપણે ઈચ્છા કરીએ છીએ...<br>ક્યારેક એ આપણને એ આપે છે, જે આપણને સમજવા માટે જરૂરી હોય છે.</div><div class="translation">Life doesn't always give us what we wish for. Sometimes, it gives us what we need to understand.</div><div class="signature">— Sarang</div></div></div></section>
-<section><div class="wrap"><div class="eyebrow">Three Worlds of Writing</div><h2>Words that come from within.</h2><div class="grid"><a class="card" href="#blogs"><div class="num">01 / BLOGS</div><h3>Stories & Thoughts</h3><p class="muted">Experiences, observations and thoughts about life, people and relationships.</p></a><a class="card" href="#shayari"><div class="num">02 / SHAYARI</div><h3>Words Between Silence</h3><p class="muted">Hindi and Gujarati shayari about love, pain, memories and life.</p></a><a class="card" href="#lessons"><div class="num">03 / LIFE LESSONS</div><h3>Lessons From Life</h3><p class="muted">English reflections on failure, resilience, relationships and time.</p></a></div></div></section>
-<section id="shayari"><div class="wrap"><div class="eyebrow">Featured Shayari</div><h2>Sometimes poetry says what we cannot.</h2><div class="feature"><div class="shayari"><small>Hindi</small>कुछ लोग दूर होकर भी<br>दिल के सबसे करीब रहते हैं,<br>और कुछ पास होकर भी<br>सिर्फ़ यादों में रहते हैं।</div><div class="shayari guj"><small>ગુજરાતી</small>કેટલાક લોકો દૂર રહીને પણ<br>હૃદયની સૌથી નજીક રહે છે,<br>અને કેટલાક નજીક રહીને પણ<br>ફક્ત યાદોમાં જ રહે છે.</div></div></div></section>
-<section id="blogs"><div class="wrap"><div class="eyebrow">Latest From My Journal</div><h2>Recent words.</h2><div class="posts">{% for post in collections.posts %}<article class="blog"><div class="eyebrow">{{ post.data.type }} / {{ post.data.category }}</div>{% if post.data.image %}<img src="{{ post.data.image }}" alt="{{ post.data.title }}">{% endif %}<h3>{{ post.data.title }}</h3><p class="muted">{{ post.data.excerpt }}</p><a class="btn" href="{{ post.url }}">Read</a></article>{% endfor %}</div></div></section>
-<section id="lessons"><div class="wrap"><div class="eyebrow">Life Lesson of the Week</div><div class="lesson">“Not everyone who walks away from you is your loss. Sometimes their absence is the space your life needed to breathe again.”</div></div></section>
-<section id="about"><div class="wrap about"><div><div class="eyebrow">About Me</div><h2>I simply write the things I sometimes cannot say.</h2></div><div class="box"><p>Welcome to <strong>Words From Within</strong>.</p><p>This is my personal corner of the internet — a place for thoughts, stories, shayari and lessons collected from life.</p><p>I believe some emotions become clearer when we write them down.</p><p>— Sarang</p></div></div></section>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+
+    <div class="eyebrow">A Personal Space for Thoughts</div>
+
+    <h1>
+      Some feelings are not meant to be explained.
+      <br>
+      <em>They are meant to be written.</em>
+    </h1>
+
+    <p class="guj">
+      કેટલીક વાતો કહેવા માટે નથી હોતી... લખવા માટે હોય છે.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="#blogs">Read My Blogs</a>
+      <a class="btn" href="#shayari">Explore Shayari</a>
+      <a class="btn" href="#lessons">Life Lessons</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+
+    <div class="eyebrow">A Thought From Me</div>
+
+    <div class="thought">
+
+      <div class="quote guj">
+        જીવન હંમેશા આપણને એ નથી આપતું જેની આપણે ઈચ્છા કરીએ છીએ...<br>
+        ક્યારેક એ આપણને એ આપે છે, જે આપણને સમજવા માટે જરૂરી હોય છે.
+      </div>
+
+      <div class="translation">
+        Life doesn't always give us what we wish for.
+        Sometimes, it gives us what we need to understand.
+      </div>
+
+      <div class="signature">
+        — Sarang
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+
+    <div class="eyebrow">Three Worlds of Writing</div>
+
+    <h2>Words that come from within.</h2>
+
+    <div class="grid">
+
+      <a class="card" href="#blogs">
+        <div class="num">01 / BLOGS</div>
+        <h3>Stories & Thoughts</h3>
+        <p class="muted">
+          Experiences, observations and thoughts about life,
+          people and relationships.
+        </p>
+      </a>
+
+      <a class="card" href="#shayari">
+        <div class="num">02 / SHAYARI</div>
+        <h3>Words Between Silence</h3>
+        <p class="muted">
+          Hindi and Gujarati shayari about love,
+          pain, memories and life.
+        </p>
+      </a>
+
+      <a class="card" href="#lessons">
+        <div class="num">03 / LIFE LESSONS</div>
+        <h3>Lessons From Life</h3>
+        <p class="muted">
+          English reflections on failure, resilience,
+          relationships and time.
+        </p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="shayari">
+  <div class="wrap">
+
+    <div class="eyebrow">Featured Shayari</div>
+
+    <h2>Sometimes poetry says what we cannot.</h2>
+
+    <div class="feature">
+
+      <div class="shayari">
+
+        <small>Hindi</small>
+
+        कुछ लोग दूर होकर भी<br>
+        दिल के सबसे करीब रहते हैं,<br>
+        और कुछ पास होकर भी<br>
+        सिर्फ़ यादों में रहते हैं।
+
+      </div>
+
+      <div class="shayari guj">
+
+        <small>ગુજરાતી</small>
+
+        કેટલાક લોકો દૂર રહીને પણ<br>
+        હૃદયની સૌથી નજીક રહે છે,<br>
+        અને કેટલાક નજીક રહીને પણ<br>
+        ફક્ત યાદોમાં જ રહે છે.
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="blogs">
+  <div class="wrap">
+
+    <div class="eyebrow">Latest From My Journal</div>
+
+    <h2>Recent words.</h2>
+
+    <div class="posts">
+
+      {% for post in collections.posts %}
+
+        <article class="blog">
+
+          <div class="eyebrow">
+            {{ post.data.type }} / {{ post.data.category }}
+          </div>
+
+          {% if post.data.image %}
+            <img
+              src="{{ post.data.image }}"
+              alt="{{ post.data.title }}"
+            >
+          {% endif %}
+
+          <h3>
+            {{ post.data.title }}
+          </h3>
+
+          {% if post.data.excerpt %}
+            <p class="muted">
+              {{ post.data.excerpt }}
+            </p>
+          {% endif %}
+
+          <a class="btn" href="{{ post.url }}">
+            Read Story
+          </a>
+
+        </article>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="lessons">
+  <div class="wrap">
+
+    <div class="eyebrow">Life Lesson</div>
+
+    <div class="lesson">
+      “Not everyone who walks away from you is your loss.
+      Sometimes their absence is the space your life needed
+      to breathe again.”
+    </div>
+
+  </div>
+</section>
+
+
+<section id="about">
+  <div class="wrap about">
+
+    <div>
+
+      <div class="eyebrow">About Me</div>
+
+      <h2>
+        I simply write the things
+        I sometimes cannot say.
+      </h2>
+
+    </div>
+
+    <div class="box">
+
+      <p>
+        Welcome to <strong>Words From Within</strong>.
+      </p>
+
+      <p>
+        This is my personal corner of the internet —
+        a place for thoughts, stories, shayari and lessons
+        collected from life.
+      </p>
+
+      <p>
+        I believe some emotions become clearer
+        when we write them down.
+      </p>
+
+      <p>
+        — Sarang
+      </p>
+
+    </div>
+
+  </div>
+</section>
