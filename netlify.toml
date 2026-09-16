@@ -1,5 +1,5 @@
 [build]
-command = "npm run build"
+command = "node node_modules/@11ty/eleventy/cmd.cjs"
 publish = "_site"
 [build.environment]
 NODE_VERSION = "22"
