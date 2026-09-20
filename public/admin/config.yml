@@ -2,13 +2,16 @@ backend:
   name: github
   repo: sarangsureshbhaipanchal/words-from-within
   branch: main
+  auth_methods:
+    - token
 
 media_folder: "public/assets/images"
 public_folder: "/assets/images"
 
-site_url: https://words-from-within.netlify.app
+site_url: https://words-from-within.pages.dev
 
 collections:
+
   - name: "posts"
     label: "Posts"
     folder: "src/posts"
@@ -16,15 +19,49 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
     fields:
-      - {label: "Title", name: "title", widget: "string"}
 
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - label: "Title"
+        name: "title"
+        widget: "string"
 
-      - {label: "Type", name: "type", widget: "select", options: ["Blog", "Hindi Shayari", "Gujarati Shayari", "Life Lesson"]}
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
 
-      - {label: "Category", name: "category", widget: "string", required: false}
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options:
+          - "Blog"
+          - "Shayari"
+          - "Life Lesson"
+        default: "Blog"
 
-      - {label: "Font Style", name: "fontStyle", widget: "select", options: ["Classic Serif", "Modern", "Typewriter", "Poetic", "Elegant", "Hindi", "Gujarati"], default: "Classic Serif"}
+      - label: "Shayari Language"
+        name: "language"
+        widget: "select"
+        options:
+          - "Hindi"
+          - "Gujarati"
+        required: false
+
+      - label: "Category"
+        name: "category"
+        widget: "string"
+        required: false
+
+      - label: "Font Style"
+        name: "fontStyle"
+        widget: "select"
+        options:
+          - "Classic Serif"
+          - "Modern"
+          - "Typewriter"
+          - "Poetic"
+          - "Elegant"
+          - "Hindi"
+          - "Gujarati"
+        default: "Classic Serif"
 
       - label: "Featured Image"
         name: "image"
@@ -33,8 +70,17 @@ collections:
         media_processing:
           enabled: false
 
-      - {label: "Excerpt", name: "excerpt", widget: "text", required: false}
+      - label: "Excerpt"
+        name: "excerpt"
+        widget: "text"
+        required: false
 
-      - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        required: false
 
-      - {label: "Writing", name: "body", widget: "markdown"}
+      - label: "Writing"
+        name: "body"
+        widget: "markdown"
