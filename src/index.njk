@@ -2,10 +2,21 @@
 layout: page.njk
 ---
 
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
 <section class="hero">
+
   <div class="wrap hero-inner">
 
-    <div class="eyebrow">A Personal Space for Thoughts</div>
+    <div class="hero-brand">
+      # Words From Within
+    </div>
+
+    <div class="eyebrow">
+      A Personal Space for Thoughts
+    </div>
 
     <h1>
       Some feelings are not meant to be explained.
@@ -17,25 +28,47 @@ layout: page.njk
       કેટલીક વાતો કહેવા માટે નથી હોતી... લખવા માટે હોય છે.
     </p>
 
+    <div class="hero-signature">
+      — Sarang Panchal
+    </div>
+
+    <div class="hero-scroll">
+      ↓ Enter the stories
+    </div>
+
   </div>
+
 </section>
 
 
+<!-- =========================================================
+     THOUGHT FROM ME
+     ========================================================= -->
+
 <section>
+
   <div class="wrap">
 
-    <div class="eyebrow">A Thought From Me</div>
+    <div class="eyebrow">
+      A Thought From Me
+    </div>
 
     <div class="thought">
 
       <div class="quote guj">
+
         જીવન હંમેશા આપણને એ નથી આપતું જેની આપણે ઈચ્છા કરીએ છીએ...<br>
-        ક્યારેક એ આપણને એ આપે છે, જે આપણને સમજવા માટે જરૂરી હોય છે.
+
+        ક્યારેક એ આપણને એ આપે છે,
+        જે આપણને સમજવા માટે જરૂરી હોય છે.
+
       </div>
 
       <div class="translation">
+
         Life doesn't always give us what we wish for.
         Sometimes, it gives us what we need to understand.
+
       </div>
 
       <div class="signature">
@@ -45,72 +78,265 @@ layout: page.njk
     </div>
 
   </div>
+
 </section>
 
 
+<!-- =========================================================
+     LATEST FROM WITHIN
+     ========================================================= -->
+
 <section>
+
   <div class="wrap">
 
-    <div class="eyebrow">Three Worlds of Writing</div>
+    <div class="eyebrow">
+      Latest From Within
+    </div>
 
-    <h2>Words that come from within.</h2>
+    <h2>
+      The words I have written lately.
+    </h2>
+
+    <p class="muted latest-intro">
+      Thoughts, feelings and lessons — written as they came.
+    </p>
+
+
+    <div class="latest-posts">
+
+      {% for post in collections.latestPosts %}
+
+        {% if loop.index <= 6 %}
+
+          <article class="latest-card">
+
+
+            <!-- IMAGE -->
+
+            {% if post.data.image %}
+
+              <a
+                href="{{ post.url }}"
+                class="latest-image-link"
+              >
+
+                <img
+                  src="{{ post.data.image }}"
+                  alt="{{ post.data.title }}"
+                  class="latest-image"
+                >
+
+              </a>
+
+            {% endif %}
+
+
+            <div class="latest-content">
+
+
+              <!-- TYPE + DATE -->
+
+              <div class="latest-meta">
+
+                {{ post.data.type | upper }}
+
+                ·
+
+                {{ post.date | readableDate }}
+
+              </div>
+
+
+              <!-- TITLE -->
+
+              <h3>
+
+                <a href="{{ post.url }}">
+                  {{ post.data.title }}
+                </a>
+
+              </h3>
+
+
+              <!-- EXCERPT -->
+
+              <p class="muted latest-excerpt">
+
+                {{ post.templateContent
+                  | cleanExcerpt
+                  | truncate(180)
+                }}
+
+              </p>
+
+
+              <!-- READ MORE -->
+
+              <a
+                href="{{ post.url }}"
+                class="latest-read"
+              >
+                Read More →
+              </a>
+
+
+            </div>
+
+          </article>
+
+        {% endif %}
+
+      {% else %}
+
+
+        <div class="latest-empty">
+
+          <p>
+            The first words are still waiting to be written.
+          </p>
+
+        </div>
+
+
+      {% endfor %}
+
+    </div>
+
+
+    <!-- VIEW ALL -->
+
+    {% if collections.latestPosts.length > 6 %}
+
+      <div class="latest-all">
+
+        <a
+          href="/blogs/"
+          class="btn"
+        >
+          Explore All Writings
+        </a>
+
+      </div>
+
+    {% endif %}
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     THREE WORLDS OF WRITING
+     ========================================================= -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="eyebrow">
+      Three Worlds of Writing
+    </div>
+
+    <h2>
+      Words that come from within.
+    </h2>
+
 
     <div class="grid">
 
-      <div class="card">
 
-        <div class="num">01 / BLOGS</div>
+      <!-- BLOGS -->
 
-        <h3>Stories & Thoughts</h3>
+      <a
+        href="/blogs/"
+        class="card"
+      >
+
+        <div class="num">
+          01 / BLOGS
+        </div>
+
+        <h3>
+          Stories & Thoughts
+        </h3>
 
         <p class="muted">
           Experiences, observations and thoughts about life,
           people and relationships.
         </p>
 
-      </div>
+      </a>
 
 
-      <div class="card">
+      <!-- SHAYARI -->
 
-        <div class="num">02 / SHAYARI</div>
+      <a
+        href="/shayari/"
+        class="card"
+      >
 
-        <h3>Words Between Silence</h3>
+        <div class="num">
+          02 / SHAYARI
+        </div>
+
+        <h3>
+          Words Between Silence
+        </h3>
 
         <p class="muted">
           Hindi and Gujarati shayari about love,
           pain, memories and life.
         </p>
 
-      </div>
+      </a>
 
 
-      <div class="card">
+      <!-- LIFE LESSONS -->
 
-        <div class="num">03 / LIFE LESSONS</div>
+      <a
+        href="/life-lessons/"
+        class="card"
+      >
 
-        <h3>Lessons From Life</h3>
+        <div class="num">
+          03 / LIFE LESSONS
+        </div>
+
+        <h3>
+          Lessons From Life
+        </h3>
 
         <p class="muted">
           English reflections on failure, resilience,
           relationships and time.
         </p>
 
-      </div>
+      </a>
+
 
     </div>
 
   </div>
+
 </section>
 
+
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
 
 <section id="about">
 
   <div class="wrap about">
 
+
     <div>
 
-      <div class="eyebrow">About Me</div>
+      <div class="eyebrow">
+        About Me
+      </div>
 
       <h2>
         I simply write the things
@@ -121,33 +347,6 @@ layout: page.njk
 
 
     <div class="box about-text">
-
-      <style>
-        .about-text {
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: 20px;
-          line-height: 1.9;
-        }
-
-        .about-text .about-intro {
-          font-size: 25px;
-          font-style: italic;
-          margin-bottom: 24px;
-        }
-
-        .about-text .about-welcome {
-          margin-top: 32px;
-          font-size: 22px;
-          font-style: italic;
-        }
-
-        .about-text .about-signature {
-          margin-top: 8px;
-          color: var(--accent);
-          font-size: 17px;
-          font-style: italic;
-        }
-      </style>
 
 
       <p class="about-intro">
@@ -182,8 +381,344 @@ layout: page.njk
         — Sarang
       </p>
 
+
     </div>
 
   </div>
 
 </section>
+
+
+<!-- =========================================================
+     LATEST FROM WITHIN STYLING
+     ========================================================= -->
+
+<style>
+
+  /* =========================
+     LATEST INTRO
+     ========================= */
+
+  .latest-intro{
+
+    max-width:650px;
+
+    margin-top:-10px;
+
+    margin-bottom:40px;
+
+  }
+
+
+  /* =========================
+     LATEST GRID
+     ========================= */
+
+  .latest-posts{
+
+    display:grid;
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:22px;
+
+  }
+
+
+  /* =========================
+     LATEST CARD
+     ========================= */
+
+  .latest-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:
+      linear-gradient(
+        145deg,
+        #1b1917,
+        #111
+      );
+
+    border:1px solid var(--line);
+
+    overflow:hidden;
+
+    transition:
+      transform .25s ease,
+      border-color .25s ease;
+
+  }
+
+
+  .latest-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#62533a;
+
+  }
+
+
+  /* =========================
+     IMAGE
+     ========================= */
+
+  .latest-image-link{
+
+    display:block;
+
+    overflow:hidden;
+
+  }
+
+
+  .latest-image{
+
+    display:block;
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:
+      transform .5s ease,
+      opacity .3s ease;
+
+  }
+
+
+  .latest-card:hover .latest-image{
+
+    transform:scale(1.03);
+
+    opacity:.9;
+
+  }
+
+
+  /* =========================
+     CONTENT
+     ========================= */
+
+  .latest-content{
+
+    padding:30px 32px 34px;
+
+  }
+
+
+  /* =========================
+     META
+     ========================= */
+
+  .latest-meta{
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:14px;
+
+  }
+
+
+  /* =========================
+     TITLE
+     ========================= */
+
+  .latest-card h3{
+
+    margin:0 0 15px;
+
+    font:
+      normal 34px/1.2
+      Georgia,serif;
+
+  }
+
+
+  .latest-card h3 a{
+
+    transition:
+      color .2s ease;
+
+  }
+
+
+  .latest-card h3 a:hover{
+
+    color:var(--gold);
+
+  }
+
+
+  /* =========================
+     EXCERPT
+     ========================= */
+
+  .latest-excerpt{
+
+    margin:0 0 25px;
+
+    line-height:1.8;
+
+  }
+
+
+  /* =========================
+     READ MORE
+     ========================= */
+
+  .latest-read{
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    letter-spacing:1.8px;
+
+    text-transform:uppercase;
+
+  }
+
+
+  .latest-read:hover{
+
+    text-decoration:underline;
+
+  }
+
+
+  /* =========================
+     EMPTY
+     ========================= */
+
+  .latest-empty{
+
+    grid-column:1 / -1;
+
+    padding:50px;
+
+    text-align:center;
+
+    border:1px solid var(--line);
+
+    background:var(--panel);
+
+    color:var(--muted);
+
+  }
+
+
+  /* =========================
+     VIEW ALL
+     ========================= */
+
+  .latest-all{
+
+    text-align:center;
+
+    margin-top:42px;
+
+  }
+
+
+  /* =========================
+     ABOUT TEXT
+     ========================= */
+
+  .about-text{
+
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+  }
+
+
+  .about-text .about-intro{
+
+    font-size:25px;
+
+    font-style:italic;
+
+    margin-bottom:24px;
+
+  }
+
+
+  .about-text .about-welcome{
+
+    margin-top:32px;
+
+    font-size:22px;
+
+    font-style:italic;
+
+  }
+
+
+  .about-text .about-signature{
+
+    margin-top:8px;
+
+    color:var(--gold);
+
+    font-size:17px;
+
+    font-style:italic;
+
+  }
+
+
+  /* =========================
+     MOBILE
+     ========================= */
+
+  @media(max-width:800px){
+
+    .latest-posts{
+
+      grid-template-columns:1fr;
+
+    }
+
+
+    .latest-image{
+
+      height:230px;
+
+    }
+
+
+    .latest-content{
+
+      padding:26px 24px 30px;
+
+    }
+
+
+    .latest-card h3{
+
+      font-size:30px;
+
+    }
+
+  }
+
+</style>

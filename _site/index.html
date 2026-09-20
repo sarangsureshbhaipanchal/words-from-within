@@ -1,8 +1,506 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WORDS FROM WITHIN | Sarang</title><style>:root{--bg:#101010;--panel:#181818;--text:#f4efe7;--muted:#aaa49a;--gold:#b79a67;--line:#302e2a;--max:1180px}*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 Arial,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(92%,var(--max));margin:auto}header{position:sticky;top:0;z-index:9;background:#101010ee;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{font:18px Georgia,serif;letter-spacing:3px}.logo span,.eyebrow{color:var(--gold)}nav{display:flex;gap:24px;font-size:13px}nav a:hover{color:var(--gold)}.hero{min-height:88vh;display:flex;align-items:center;background:radial-gradient(circle at 78% 35%,#b79a6730,transparent 28%),linear-gradient(120deg,#080808,#191715 55%,#0b0b0b)}.hero-inner{max-width:900px;padding:90px 0}.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:11px}h1{font:normal clamp(44px,7vw,82px)/1.05 Georgia,serif;margin:22px 0}.hero p{font:italic 24px Georgia,serif;color:#d7d1c8}.guj{font-family:"Noto Serif Gujarati","Nirmala UI",serif}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-block;padding:13px 20px;border:1px solid var(--gold);font-size:12px;letter-spacing:1.4px;text-transform:uppercase;background:transparent;color:inherit}.primary{background:var(--gold);color:#17130d}section{padding:90px 0;border-bottom:1px solid var(--line)}h2{font:normal clamp(34px,5vw,54px)/1.15 Georgia,serif;margin:10px 0 28px}.muted{color:var(--muted)}.thought{background:var(--panel);border:1px solid var(--line);padding:52px}.quote{font:normal clamp(27px,4vw,45px)/1.4 Georgia,serif}.translation{color:var(--muted);font-style:italic;margin-top:20px}.signature{color:var(--gold);margin-top:25px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:var(--panel);border:1px solid var(--line);padding:30px;min-height:235px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#62533a}.num{color:var(--gold);font-size:11px;letter-spacing:2px}.card h3,.blog h3{font:normal 30px Georgia,serif;margin:15px 0}.feature{display:grid;grid-template-columns:1fr 1fr;gap:20px}.shayari{background:#181818;border-left:2px solid var(--gold);padding:34px;font:normal 28px/1.75 Georgia,serif}.shayari small{display:block;color:var(--gold);font:11px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}.posts{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.blog{padding:36px;background:linear-gradient(135deg,#1b1917,#111);border:1px solid var(--line)}.blog img{width:100%;height:240px;object-fit:cover;border:1px solid var(--line)}.blog h3{font-size:40px}.lesson{padding:42px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:normal 32px/1.5 Georgia,serif}.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}.box{background:var(--panel);border:1px solid var(--line);padding:38px}footer{padding:40px 0;color:#8f8a82;font-size:13px}.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}@media(max-width:800px){nav{display:none}.grid,.feature,.about,.posts{grid-template-columns:1fr}.hero{min-height:80vh}section{padding:65px 0}.thought{padding:32px 24px}.shayari{font-size:24px}}</style></head><body><header><div class="wrap nav"><a class="logo" href="/">WORDS <span>FROM</span> WITHIN</a><nav><a href="/#blogs">Blogs</a><a href="/#shayari">Shayari</a><a href="/#lessons">Life Lessons</a><a href="/#about">About</a><a href="/admin/">Write</a></nav></div></header><main>
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>WORDS FROM WITHIN | Sarang</title>
+
+  <style>
+
+    :root{
+      --bg:#101010;
+      --panel:#181818;
+      --text:#f4efe7;
+      --muted:#aaa49a;
+      --gold:#b79a67;
+      --line:#302e2a;
+      --max:1180px;
+    }
+
+    *{
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font:16px/1.7 Arial,sans-serif;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      width:min(92%,var(--max));
+      margin:auto;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:9;
+      background:#101010ee;
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(12px);
+    }
+
+    .nav{
+      height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      font:18px Georgia,serif;
+      letter-spacing:3px;
+    }
+
+    .logo span,
+    .eyebrow{
+      color:var(--gold);
+    }
+
+    nav{
+      display:flex;
+      gap:24px;
+      font-size:13px;
+    }
+
+    nav a:hover{
+      color:var(--gold);
+    }
+
+
+    /* =========================
+       HOMEPAGE HERO
+       ========================= */
+
+    .hero{
+      min-height:calc(100vh - 74px);
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5,5,5,.72),
+          rgba(5,5,5,.48),
+          rgba(5,5,5,.62)
+        ),
+        url("/assets/images/words-from-within-home.png");
+
+      background-size:cover;
+      background-position:center center;
+      background-repeat:no-repeat;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,.15),
+          rgba(0,0,0,.20) 50%,
+          rgba(0,0,0,.70)
+        );
+
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      max-width:900px;
+      padding:90px 0;
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-brand{
+      font:normal clamp(22px,3vw,34px) Georgia,serif;
+      letter-spacing:4px;
+      color:#f4efe7;
+      margin-bottom:30px;
+      text-transform:uppercase;
+    }
+
+    .hero-brand::first-letter{
+      color:var(--gold);
+    }
+
+    .hero .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:3px;
+      font-size:11px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      font:normal clamp(44px,7vw,82px)/1.05 Georgia,serif;
+      margin:22px 0;
+      max-width:850px;
+    }
+
+    .hero p{
+      font:italic 24px Georgia,serif;
+      color:#d7d1c8;
+      max-width:720px;
+    }
+
+    .hero-signature{
+      margin-top:34px;
+      color:var(--gold);
+      font:italic 18px Georgia,serif;
+      letter-spacing:1px;
+    }
+
+    .hero-scroll{
+      margin-top:55px;
+      font-size:11px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      color:#aaa49a;
+    }
+
+    .guj{
+      font-family:"Noto Serif Gujarati","Nirmala UI",serif;
+    }
+
+
+    /* =========================
+       BUTTONS
+       ========================= */
+
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:34px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:13px 20px;
+      border:1px solid var(--gold);
+      font-size:12px;
+      letter-spacing:1.4px;
+      text-transform:uppercase;
+      background:transparent;
+      color:inherit;
+    }
+
+    .primary{
+      background:var(--gold);
+      color:#17130d;
+    }
+
+
+    /* =========================
+       SECTIONS
+       ========================= */
+
+    section{
+      padding:90px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    h2{
+      font:normal clamp(34px,5vw,54px)/1.15 Georgia,serif;
+      margin:10px 0 28px;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+
+    /* =========================
+       THOUGHT
+       ========================= */
+
+    .thought{
+      background:var(--panel);
+      border:1px solid var(--line);
+      padding:52px;
+    }
+
+    .quote{
+      font:normal clamp(27px,4vw,45px)/1.4 Georgia,serif;
+    }
+
+    .translation{
+      color:var(--muted);
+      font-style:italic;
+      margin-top:20px;
+    }
+
+    .signature{
+      color:var(--gold);
+      margin-top:25px;
+    }
+
+
+    /* =========================
+       CARDS
+       ========================= */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:var(--panel);
+      border:1px solid var(--line);
+      padding:30px;
+      min-height:235px;
+      transition:.2s;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:#62533a;
+    }
+
+    .num{
+      color:var(--gold);
+      font-size:11px;
+      letter-spacing:2px;
+    }
+
+    .card h3,
+    .blog h3{
+      font:normal 30px Georgia,serif;
+      margin:15px 0;
+    }
+
+
+    /* =========================
+       POSTS
+       ========================= */
+
+    .feature{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .shayari{
+      background:#181818;
+      border-left:2px solid var(--gold);
+      padding:34px;
+      font:normal 28px/1.75 Georgia,serif;
+    }
+
+    .shayari small{
+      display:block;
+      color:var(--gold);
+      font:11px Arial,sans-serif;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+
+    .posts{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+
+    .blog{
+      padding:36px;
+      background:linear-gradient(135deg,#1b1917,#111);
+      border:1px solid var(--line);
+    }
+
+    .blog img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+      border:1px solid var(--line);
+    }
+
+    .blog h3{
+      font-size:40px;
+    }
+
+    .lesson{
+      padding:42px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      font:normal 32px/1.5 Georgia,serif;
+    }
+
+
+    /* =========================
+       ABOUT
+       ========================= */
+
+    .about{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:60px;
+    }
+
+    .box{
+      background:var(--panel);
+      border:1px solid var(--line);
+      padding:38px;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer{
+      padding:40px 0;
+      color:#8f8a82;
+      font-size:13px;
+    }
+
+    .foot{
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media(max-width:800px){
+
+      nav{
+        display:none;
+      }
+
+      .grid,
+      .feature,
+      .about,
+      .posts{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        min-height:calc(100vh - 60px);
+        background-position:60% center;
+      }
+
+      .hero-inner{
+        padding:70px 0;
+      }
+
+      .hero-brand{
+        letter-spacing:2px;
+      }
+
+      h1{
+        font-size:clamp(40px,11vw,62px);
+      }
+
+      .hero p{
+        font-size:20px;
+      }
+
+      section{
+        padding:65px 0;
+      }
+
+      .thought{
+        padding:32px 24px;
+      }
+
+      .shayari{
+        font-size:24px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <header>
+
+    <div class="wrap nav">
+
+      <a class="logo" href="/">
+        WORDS <span>FROM</span> WITHIN
+      </a>
+
+      <!-- MAIN WEBSITE NAVIGATION -->
+
+      <nav>
+
+        <a href="/blogs/">
+          Blogs
+        </a>
+
+        <a href="/shayari/">
+          Shayari
+        </a>
+
+        <a href="/life-lessons/">
+          Life Lessons
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a href="/admin/">
+          Write
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
 <section class="hero">
+
   <div class="wrap hero-inner">
 
-    <div class="eyebrow">A Personal Space for Thoughts</div>
+    <div class="hero-brand">
+      # Words From Within
+    </div>
+
+    <div class="eyebrow">
+      A Personal Space for Thoughts
+    </div>
 
     <h1>
       Some feelings are not meant to be explained.
@@ -14,25 +512,47 @@
       કેટલીક વાતો કહેવા માટે નથી હોતી... લખવા માટે હોય છે.
     </p>
 
+    <div class="hero-signature">
+      — Sarang Panchal
+    </div>
+
+    <div class="hero-scroll">
+      ↓ Enter the stories
+    </div>
+
   </div>
+
 </section>
 
 
+<!-- =========================================================
+     THOUGHT FROM ME
+     ========================================================= -->
+
 <section>
+
   <div class="wrap">
 
-    <div class="eyebrow">A Thought From Me</div>
+    <div class="eyebrow">
+      A Thought From Me
+    </div>
 
     <div class="thought">
 
       <div class="quote guj">
+
         જીવન હંમેશા આપણને એ નથી આપતું જેની આપણે ઈચ્છા કરીએ છીએ...<br>
-        ક્યારેક એ આપણને એ આપે છે, જે આપણને સમજવા માટે જરૂરી હોય છે.
+
+        ક્યારેક એ આપણને એ આપે છે,
+        જે આપણને સમજવા માટે જરૂરી હોય છે.
+
       </div>
 
       <div class="translation">
+
         Life doesn't always give us what we wish for.
         Sometimes, it gives us what we need to understand.
+
       </div>
 
       <div class="signature">
@@ -42,71 +562,237 @@
     </div>
 
   </div>
+
 </section>
 
 
+<!-- =========================================================
+     LATEST FROM WITHIN
+     ========================================================= -->
+
 <section>
+
   <div class="wrap">
 
-    <div class="eyebrow">Three Worlds of Writing</div>
+    <div class="eyebrow">
+      Latest From Within
+    </div>
 
-    <h2>Words that come from within.</h2>
+    <h2>
+      The words I have written lately.
+    </h2>
+
+    <p class="muted latest-intro">
+      Thoughts, feelings and lessons — written as they came.
+    </p>
+
+
+    <div class="latest-posts">
+
+      
+
+        
+
+          <article class="latest-card">
+
+
+            <!-- IMAGE -->
+
+            
+
+              <a
+                href="/posts/unseen-wounds/"
+                class="latest-image-link"
+              >
+
+                <img
+                  src="/assets/images/unseen-wounds-1-.png"
+                  alt="Unseen Wounds"
+                  class="latest-image"
+                >
+
+              </a>
+
+            
+
+
+            <div class="latest-content">
+
+
+              <!-- TYPE + DATE -->
+
+              <div class="latest-meta">
+
+                LIFE LESSON
+
+                ·
+
+                16 September 2026
+
+              </div>
+
+
+              <!-- TITLE -->
+
+              <h3>
+
+                <a href="/posts/unseen-wounds/">
+                  Unseen Wounds
+                </a>
+
+              </h3>
+
+
+              <!-- EXCERPT -->
+
+              <p class="muted latest-excerpt">
+
+                &quot;I became good at hiding my pain, because nobody ever stayed long enough to understand it.&quot; - Sarang Panchal
+
+              </p>
+
+
+              <!-- READ MORE -->
+
+              <a
+                href="/posts/unseen-wounds/"
+                class="latest-read"
+              >
+                Read More →
+              </a>
+
+
+            </div>
+
+          </article>
+
+        
+
+      
+
+    </div>
+
+
+    <!-- VIEW ALL -->
+
+    
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     THREE WORLDS OF WRITING
+     ========================================================= -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="eyebrow">
+      Three Worlds of Writing
+    </div>
+
+    <h2>
+      Words that come from within.
+    </h2>
+
 
     <div class="grid">
 
-      <div class="card">
 
-        <div class="num">01 / BLOGS</div>
+      <!-- BLOGS -->
 
-        <h3>Stories & Thoughts</h3>
+      <a
+        href="/blogs/"
+        class="card"
+      >
+
+        <div class="num">
+          01 / BLOGS
+        </div>
+
+        <h3>
+          Stories & Thoughts
+        </h3>
 
         <p class="muted">
           Experiences, observations and thoughts about life,
           people and relationships.
         </p>
 
-      </div>
+      </a>
 
 
-      <div class="card">
+      <!-- SHAYARI -->
 
-        <div class="num">02 / SHAYARI</div>
+      <a
+        href="/shayari/"
+        class="card"
+      >
 
-        <h3>Words Between Silence</h3>
+        <div class="num">
+          02 / SHAYARI
+        </div>
+
+        <h3>
+          Words Between Silence
+        </h3>
 
         <p class="muted">
           Hindi and Gujarati shayari about love,
           pain, memories and life.
         </p>
 
-      </div>
+      </a>
 
 
-      <div class="card">
+      <!-- LIFE LESSONS -->
 
-        <div class="num">03 / LIFE LESSONS</div>
+      <a
+        href="/life-lessons/"
+        class="card"
+      >
 
-        <h3>Lessons From Life</h3>
+        <div class="num">
+          03 / LIFE LESSONS
+        </div>
+
+        <h3>
+          Lessons From Life
+        </h3>
 
         <p class="muted">
           English reflections on failure, resilience,
           relationships and time.
         </p>
 
-      </div>
+      </a>
+
 
     </div>
 
   </div>
+
 </section>
 
 
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
+
 <section id="about">
+
   <div class="wrap about">
+
 
     <div>
 
-      <div class="eyebrow">About Me</div>
+      <div class="eyebrow">
+        About Me
+      </div>
 
       <h2>
         I simply write the things
@@ -116,28 +802,402 @@
     </div>
 
 
-    <div class="box">
+    <div class="box about-text">
 
-      <p>
-        Welcome to <strong>Words From Within</strong>.
+
+      <p class="about-intro">
+        Hi, I’m Sarang.
       </p>
 
-      <p>
-        This is my personal corner of the internet —
-        a place for thoughts, stories, shayari and lessons
-        collected from life.
-      </p>
 
       <p>
-        I believe some emotions become clearer
-        when we write them down.
+        I don’t always know how to say what I feel,
+        so I write it instead.
       </p>
 
+
       <p>
+        This space is about life, people, memories,
+        emotions, and the little things that stay with us.
+      </p>
+
+
+      <p>
+        If something here feels familiar to you,
+        then maybe you’ll understand why I write.
+      </p>
+
+
+      <p class="about-welcome">
+        Welcome to Words From Within.
+      </p>
+
+
+      <p class="about-signature">
         — Sarang
       </p>
+
 
     </div>
 
   </div>
-</section></main><footer><div class="wrap foot"><div>© 2026 Sarang Panchal · Words From Within</div><div>Thoughts · Feelings · Stories · Life</div></div></footer></body></html>
+
+</section>
+
+
+<!-- =========================================================
+     LATEST FROM WITHIN STYLING
+     ========================================================= -->
+
+<style>
+
+  /* =========================
+     LATEST INTRO
+     ========================= */
+
+  .latest-intro{
+
+    max-width:650px;
+
+    margin-top:-10px;
+
+    margin-bottom:40px;
+
+  }
+
+
+  /* =========================
+     LATEST GRID
+     ========================= */
+
+  .latest-posts{
+
+    display:grid;
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:22px;
+
+  }
+
+
+  /* =========================
+     LATEST CARD
+     ========================= */
+
+  .latest-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:
+      linear-gradient(
+        145deg,
+        #1b1917,
+        #111
+      );
+
+    border:1px solid var(--line);
+
+    overflow:hidden;
+
+    transition:
+      transform .25s ease,
+      border-color .25s ease;
+
+  }
+
+
+  .latest-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#62533a;
+
+  }
+
+
+  /* =========================
+     IMAGE
+     ========================= */
+
+  .latest-image-link{
+
+    display:block;
+
+    overflow:hidden;
+
+  }
+
+
+  .latest-image{
+
+    display:block;
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:
+      transform .5s ease,
+      opacity .3s ease;
+
+  }
+
+
+  .latest-card:hover .latest-image{
+
+    transform:scale(1.03);
+
+    opacity:.9;
+
+  }
+
+
+  /* =========================
+     CONTENT
+     ========================= */
+
+  .latest-content{
+
+    padding:30px 32px 34px;
+
+  }
+
+
+  /* =========================
+     META
+     ========================= */
+
+  .latest-meta{
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:14px;
+
+  }
+
+
+  /* =========================
+     TITLE
+     ========================= */
+
+  .latest-card h3{
+
+    margin:0 0 15px;
+
+    font:
+      normal 34px/1.2
+      Georgia,serif;
+
+  }
+
+
+  .latest-card h3 a{
+
+    transition:
+      color .2s ease;
+
+  }
+
+
+  .latest-card h3 a:hover{
+
+    color:var(--gold);
+
+  }
+
+
+  /* =========================
+     EXCERPT
+     ========================= */
+
+  .latest-excerpt{
+
+    margin:0 0 25px;
+
+    line-height:1.8;
+
+  }
+
+
+  /* =========================
+     READ MORE
+     ========================= */
+
+  .latest-read{
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    letter-spacing:1.8px;
+
+    text-transform:uppercase;
+
+  }
+
+
+  .latest-read:hover{
+
+    text-decoration:underline;
+
+  }
+
+
+  /* =========================
+     EMPTY
+     ========================= */
+
+  .latest-empty{
+
+    grid-column:1 / -1;
+
+    padding:50px;
+
+    text-align:center;
+
+    border:1px solid var(--line);
+
+    background:var(--panel);
+
+    color:var(--muted);
+
+  }
+
+
+  /* =========================
+     VIEW ALL
+     ========================= */
+
+  .latest-all{
+
+    text-align:center;
+
+    margin-top:42px;
+
+  }
+
+
+  /* =========================
+     ABOUT TEXT
+     ========================= */
+
+  .about-text{
+
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+  }
+
+
+  .about-text .about-intro{
+
+    font-size:25px;
+
+    font-style:italic;
+
+    margin-bottom:24px;
+
+  }
+
+
+  .about-text .about-welcome{
+
+    margin-top:32px;
+
+    font-size:22px;
+
+    font-style:italic;
+
+  }
+
+
+  .about-text .about-signature{
+
+    margin-top:8px;
+
+    color:var(--gold);
+
+    font-size:17px;
+
+    font-style:italic;
+
+  }
+
+
+  /* =========================
+     MOBILE
+     ========================= */
+
+  @media(max-width:800px){
+
+    .latest-posts{
+
+      grid-template-columns:1fr;
+
+    }
+
+
+    .latest-image{
+
+      height:230px;
+
+    }
+
+
+    .latest-content{
+
+      padding:26px 24px 30px;
+
+    }
+
+
+    .latest-card h3{
+
+      font-size:30px;
+
+    }
+
+  }
+
+</style>
+
+  </main>
+
+
+  <footer>
+
+    <div class="wrap foot">
+
+      <div>
+        © 2026 Sarang Panchal · Words From Within
+      </div>
+
+      <div>
+        Thoughts · Feelings · Stories · Life
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

@@ -2,22 +2,39 @@ backend:
   name: github
   repo: sarangsureshbhaipanchal/words-from-within
   branch: main
+
 media_folder: "public/assets/images"
 public_folder: "/assets/images"
+
 site_url: https://words-from-within.netlify.app
+
 collections:
   - name: "posts"
     label: "Posts"
     folder: "src/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+
     fields:
       - {label: "Title", name: "title", widget: "string"}
+
       - {label: "Publish Date", name: "date", widget: "datetime"}
+
       - {label: "Type", name: "type", widget: "select", options: ["Blog", "Hindi Shayari", "Gujarati Shayari", "Life Lesson"]}
+
       - {label: "Category", name: "category", widget: "string", required: false}
+
       - {label: "Font Style", name: "fontStyle", widget: "select", options: ["Classic Serif", "Modern", "Typewriter", "Poetic", "Elegant", "Hindi", "Gujarati"], default: "Classic Serif"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
+
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+        required: false
+        media_processing:
+          enabled: false
+
       - {label: "Excerpt", name: "excerpt", widget: "text", required: false}
+
       - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}
+
       - {label: "Writing", name: "body", widget: "markdown"}

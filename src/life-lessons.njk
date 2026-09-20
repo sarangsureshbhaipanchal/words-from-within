@@ -1,0 +1,78 @@
+---
+layout: page.njk
+permalink: /life-lessons/
+---
+
+<section>
+
+  <div class="wrap">
+
+    <div class="eyebrow">
+      Words From Within
+    </div>
+
+    <h1>
+      Life Lessons
+    </h1>
+
+    <p class="muted">
+      Reflections on failure, resilience, relationships and time.
+    </p>
+
+    <div class="posts">
+
+      {% for post in collections.lifeLessons %}
+
+        <article class="blog">
+
+          {% if post.data.image %}
+
+            <img
+              src="{{ post.data.image }}"
+              alt="{{ post.data.title }}"
+            >
+
+          {% endif %}
+
+          <div class="num">
+            LIFE LESSON · {{ post.date | readableDate }}
+          </div>
+
+          <h3>
+            <a href="{{ post.url }}">
+              {{ post.data.title }}
+            </a>
+          </h3>
+
+          <p class="muted">
+
+            {{ post.templateContent
+              | cleanExcerpt
+              | truncate(180)
+            }}
+
+          </p>
+
+          <a
+            href="{{ post.url }}"
+            class="btn"
+          >
+            Read More
+          </a>
+
+        </article>
+
+
+      {% else %}
+
+        <p class="muted">
+          No life lessons published yet.
+        </p>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>

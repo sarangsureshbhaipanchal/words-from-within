@@ -1,0 +1,78 @@
+---
+layout: page.njk
+permalink: /shayari/
+---
+
+<section>
+
+  <div class="wrap">
+
+    <div class="eyebrow">
+      Words From Within
+    </div>
+
+    <h1>
+      Shayari
+    </h1>
+
+    <p class="muted">
+      Words between silence — love, pain, memories and life.
+    </p>
+
+    <div class="posts">
+
+      {% for post in collections.shayari %}
+
+        <article class="blog">
+
+          {% if post.data.image %}
+
+            <img
+              src="{{ post.data.image }}"
+              alt="{{ post.data.title }}"
+            >
+
+          {% endif %}
+
+          <div class="num">
+            SHAYARI · {{ post.date | readableDate }}
+          </div>
+
+          <h3>
+            <a href="{{ post.url }}">
+              {{ post.data.title }}
+            </a>
+          </h3>
+
+          <p class="muted">
+
+            {{ post.templateContent
+              | cleanExcerpt
+              | truncate(180)
+            }}
+
+          </p>
+
+          <a
+            href="{{ post.url }}"
+            class="btn"
+          >
+            Read More
+          </a>
+
+        </article>
+
+
+      {% else %}
+
+        <p class="muted">
+          No shayari published yet.
+        </p>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
